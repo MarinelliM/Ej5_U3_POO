@@ -1,36 +1,11 @@
-# from zope.interface import interface
-# from zope.interface import implementer
-# from ClaseObjeto import Objeto
-# #from interface import CInterface
-# from abc import ABC, abstractclassmethod
-# class CInterface(interface):
-#     @abstractclassmethod
-#     def insertarElemento(objeto,posicion):
-#         pass
-#     @abstractclassmethod
-#     def agregarElemento(elemento):
-#         pass
-#     @abstractclassmethod
-#     def mostrarElemento(posicion):
-#         pass
-
-# @implementer(CInterface)
-# class Coleccion(CInterface):
-#     __lista: list
-from zope.interface import Interface, implementer,IInterfaceDeclaration
+from zope.interface import implementer,IInterfaceDeclaration
 from ClaseObjeto import Objeto
-#from abc import ABC, abstractmethod
 
 class CInterface(IInterfaceDeclaration):
-    #@abstractmethod
     def insertarElemento(self, objeto, posicion):
         pass
-
-    #@abstractmethod
     def agregarElemento(self, elemento):
         pass
-
-    #@abstractmethod
     def mostrarElemento(self, posicion):
         pass
 
@@ -55,10 +30,6 @@ class Coleccion:
             else: 
                 print('Objeto:')
                 self.__lista[posicion].mostrar()
-
-    # def cole(self, manejadorco: CInterface):
-    #     posicion = str(input('Posicion:'))
-    #     manejadorco.mostrarElemento(posicion)
 
     def test(self):
         manejador = Coleccion()
